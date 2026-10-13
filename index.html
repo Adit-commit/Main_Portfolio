@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Soni | Software Developer & Neural Architect</title>
+  <meta name="description" content="Portfolio of Aditya Soni - 1st Year B.Tech CSE student at JECRC University. Focused on Neural Networks, Machine Learning Mathematics, Formula 1, and Software Engineering." />
+  <meta name="keywords" content="Aditya Soni, Software Development Intern, Neural Networks, Machine Learning, JECRC University, Formula 1, Portfolio" />
+  <meta name="author" content="Aditya Soni" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Purrweb-Inspired Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Soothing Smooth Custom Cursor Elements -->
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <!-- Signature Purrweb Interactive Inspector Lens -->
+  <div class="inspector-lens" id="inspector-lens">
+    <div class="lens-center-cross"></div>
+    <div class="lens-tag" id="lens-tag">INSPECT</div>
+  </div>
+
+  <!-- Interactive Neural Synapses Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Dribbble Ambient Aura Background Orbs -->
+  <div class="ambient-aura aura-1"></div>
+  <div class="ambient-aura aura-2"></div>
+  <div class="ambient-aura aura-3"></div>
+
+  <!-- ==================== PURRWEB TOP FLOATING NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand">
+        <span class="brand-title">&lt;Aditya<span class="brand-dot">.</span>Soni /&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#certificate" class="nav-link">Certificate</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle (Light / Dark) -->
+        <button id="theme-toggle-btn" class="theme-switch-btn" title="Toggle Light / Dark Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <!-- Purrweb Inspector Tool Toggle -->
+        <button id="inspector-toggle" class="inspector-nav-btn" title="Toggle Purrweb Inspector Lens">
+          <i class="fa-solid fa-magnifying-glass"></i> Inspector
+        </button>
+        <a href="https://github.com/Adit-commit" target="_blank" rel="noopener noreferrer" class="social-circle" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/aditya-soni-918044429/" target="_blank" rel="noopener noreferrer" class="social-circle" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <button id="nav-resume-btn" class="btn btn-purrweb btn-sm">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-toggle" id="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="brand-title">&lt;Aditya<span class="brand-dot">.</span>Soni /&gt;</span>
+      <button class="drawer-close" id="drawer-close">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#home" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#about" class="drawer-link"><i class="fa-solid fa-user-astronaut"></i> About Me</a>
+      <a href="#education" class="drawer-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+      <a href="#skills" class="drawer-link"><i class="fa-solid fa-microchip"></i> Skills</a>
+      <a href="#projects" class="drawer-link"><i class="fa-solid fa-cubes"></i> Projects</a>
+      <a href="#resume" class="drawer-link"><i class="fa-solid fa-file-invoice"></i> Resume (Attached)</a>
+      <a href="#certificate" class="drawer-link"><i class="fa-solid fa-award"></i> Certificate</a>
+      <a href="#contact" class="drawer-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+    </div>
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px;">
+      <button id="drawer-resume-btn" class="btn btn-purrweb" style="width:100%;">
+        <i class="fa-solid fa-file-pdf"></i> View Attached Resume
+      </button>
+      <div style="display:flex; justify-content:center; gap:12px;">
+        <a href="https://github.com/Adit-commit" target="_blank" class="social-circle"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/aditya-soni-918044429/" target="_blank" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/aditya_soni_082/" target="_blank" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==================== 1. PURRWEB HERO SECTION ==================== -->
+    <section id="home" class="hero-section" data-component="Hero Section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left: Hero Text & Badges -->
+          <div class="hero-details">
+            <div class="hero-badge-row">
+              <span class="status-pill">
+                <span class="status-dot"></span> Open For Software &amp; AI Internships 2026
+              </span>
+              <span class="status-pill" style="border-color:rgba(139,92,246,0.3); color:#c084fc;">
+                <i class="fa-solid fa-graduation-cap"></i> 1st Year B.Tech CSE @ JECRC
+              </span>
+            </div>
+
+            <h1 class="hero-headline">
+              Creative Software &amp;<br/>
+              <span class="grad-text">Neural Developer</span>
+            </h1>
+
+            <div class="hero-role-typing">
+              <span id="typewriter-text"></span>
+              <span class="typing-cursor">|</span>
+            </div>
+
+            <p class="hero-bio">
+              I am <strong>Aditya Soni</strong>, a 1st-year <strong>B.Tech Computer Science</strong> student at 
+              <strong>JECRC University, Jaipur</strong>. Deeply passionate about developing real-world skills, understanding 
+              the <strong>Mathematics</strong> behind <strong>Neural Networks &amp; Machine Learning</strong>, and building 
+              high-performance software—from live Vercel web apps to Formula 1 race telemetry models.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#projects" class="btn btn-purrweb">
+                <i class="fa-solid fa-arrow-right"></i> Explore Projects
+              </a>
+              <button id="hero-download-resume-btn" class="btn btn-secondary">
+                <i class="fa-solid fa-download"></i> Download Attached Resume
+              </button>
+              <a href="#certificate" class="btn btn-outline-cyan">
+                <i class="fa-solid fa-award"></i> AI Certificate
+              </a>
+            </div>
+
+            <!-- Stats Ribbon Strip -->
+            <div class="hero-stats-strip">
+              <div class="stat-unit">
+                <span class="stat-val grad-text-cyan">1st</span>
+                <span class="stat-lbl">Year B.Tech CSE</span>
+              </div>
+              <div class="stat-unit">
+                <span class="stat-val grad-text">Vercel</span>
+                <span class="stat-lbl">Live Deployed</span>
+              </div>
+              <div class="stat-unit">
+                <span class="stat-val grad-text-sunset">C &amp; DSA</span>
+                <span class="stat-lbl">Core Logic</span>
+              </div>
+              <div class="stat-unit">
+                <span class="stat-val" style="color:var(--neon-emerald)">F1 &bull; ML</span>
+                <span class="stat-lbl">Passion Driven</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Purrweb Profile Frame -->
+          <div class="hero-showcase">
+            <div class="purr-avatar-frame" data-component="Profile Showcase">
+              <div class="purr-img-holder">
+                <img src="assets/profile.jpg" alt="Aditya Soni" loading="eager" />
+                <div class="avatar-caption">
+                  <span class="avatar-name">Aditya Soni</span>
+                  <span class="avatar-title">&lt;Aspiring Software Development Intern /&gt;</span>
+                </div>
+              </div>
+
+              <!-- Floating Purrweb Badges -->
+              <div class="floating-sticker sticker-1">
+                <i class="fa-solid fa-brain"></i> Neural Networks &amp; Math
+              </div>
+              <div class="floating-sticker sticker-2">
+                <i class="fa-solid fa-flag-checkered"></i> Formula 1 Telemetry
+              </div>
+              <div class="floating-sticker sticker-3">
+                <i class="fa-solid fa-location-dot"></i> Jaipur &bull; Gwalior
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PURRWEB SIGNATURE MARQUEE ==================== -->
+    <div class="marquee-ribbon" data-component="Marquee Strip">
+      <div class="marquee-content">
+        <span>✦ NEURAL ARCHITECTURES</span>
+        <span class="star">✦</span>
+        <span>MACHINE LEARNING MATHEMATICS</span>
+        <span class="star">✦</span>
+        <span>C PROGRAMMING &amp; DATA STRUCTURES</span>
+        <span class="star">✦</span>
+        <span>FORMULA 1 TELEMETRY &amp; STRATEGY</span>
+        <span class="star">✦</span>
+        <span>SOLO TRAVELER &amp; BACKPACKER</span>
+        <span class="star">✦</span>
+        <span>VERCEL CLOUD DEPLOYMENT</span>
+        <span class="star">✦</span>
+        <span>CINEMA VISUAL STYLES &amp; NARRATIVES</span>
+        <span class="star">✦</span>
+        <span>JECRC UNIVERSITY JAIPUR</span>
+        <span class="star">✦</span>
+        <span>✦ NEURAL ARCHITECTURES</span>
+        <span class="star">✦</span>
+        <span>MACHINE LEARNING MATHEMATICS</span>
+        <span class="star">✦</span>
+        <span>C PROGRAMMING &amp; DATA STRUCTURES</span>
+        <span class="star">✦</span>
+        <span>FORMULA 1 TELEMETRY &amp; STRATEGY</span>
+      </div>
+    </div>
+
+    <!-- ==================== 2. ABOUT ME (PURRWEB BENTO GRID) ==================== -->
+    <section id="about" class="section-padding" data-component="About Section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-pill">
+            <i class="fa-solid fa-user-astronaut"></i> Discover Story
+          </div>
+          <h2 class="section-title">About <span class="grad-text">Me</span></h2>
+          <p class="section-desc">
+            Who I am, what ignites my curiosity, and the multidisciplinary interests shaping my engineering journey.
+          </p>
+        </div>
+
+        <div class="about-bento-grid">
+          <!-- Bento 1: Tech & Philosophy (Wide) -->
+          <div class="purr-card bento-box bento-col-8" data-component="Engineering Philosophy">
+            <div class="bento-icon bento-icon-purple">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="bento-heading">Engineering Mindset &amp; The Neural Network Passion</h3>
+            <p class="bento-body">
+              I am <strong>Aditya Soni</strong>, a student pursuing my <strong>Bachelor of Technology in Computer Science &amp; Engineering</strong> at <strong>JECRC University, Jaipur</strong>. My objective is to master real-world skills in the tech field, moving beyond rote syntax to build functional, scalable systems.
+            </p>
+            <p class="bento-body">
+              I have an intense fascination with <strong>Neural Networks</strong>, <strong>Machine Learning</strong>, and the pure <strong>Mathematics</strong> powering them: matrix transformations in linear algebra, multivariable calculus gradients ($\partial L/\partial W$) in backpropagation, and probabilistic optimization. To me, algorithms are the bridge between mathematical beauty and real-world software applications.
+            </p>
+            <div class="pill-cluster">
+              <span class="cluster-pill">#NeuralNetworks</span>
+              <span class="cluster-pill">#MultivariableCalculus</span>
+              <span class="cluster-pill">#LinearAlgebra</span>
+              <span class="cluster-pill">#RealWorldSkills</span>
+              <span class="cluster-pill">#JECRCUniversity</span>
+            </div>
+          </div>
+
+          <!-- Bento 2: Formula 1 (Narrow) -->
+          <div class="purr-card bento-box bento-col-4" data-component="Formula 1 Passion">
+            <div class="bento-icon bento-icon-pink">
+              <i class="fa-solid fa-flag-checkered"></i>
+            </div>
+            <h3 class="bento-heading">Formula 1 Enthusiast</h3>
+            <p class="bento-body">
+              A high-octane passion for Formula 1 motorsport engineering. Deeply interested in cornering aerodynamics, race telemetry physics, tire compound wear degradation, and split-second pit strategy.
+            </p>
+            <div class="pill-cluster">
+              <span class="cluster-pill">#F1Telemetry</span>
+              <span class="cluster-pill">#RaceStrategy</span>
+              <span class="cluster-pill">#Aerodynamics</span>
+            </div>
+          </div>
+
+          <!-- Bento 3: Solo Traveling -->
+          <div class="purr-card bento-box bento-col-6" data-component="Solo Traveling">
+            <div class="bento-icon bento-icon-cyan">
+              <i class="fa-solid fa-person-walking-luggage"></i>
+            </div>
+            <h3 class="bento-heading">Solo Traveling &amp; Exploration</h3>
+            <p class="bento-body">
+              My favorite hobby is solo travelling across Indian cities and serene routes. Stepping into unfamiliar environments builds self-reliance, observation, independent decision-making, and high adaptability.
+            </p>
+            <div class="pill-cluster">
+              <span class="cluster-pill">#SoloBackpacker</span>
+              <span class="cluster-pill">#SelfReliance</span>
+              <span class="cluster-pill">#Adaptability</span>
+            </div>
+          </div>
+
+          <!-- Bento 4: Cinema Styles -->
+          <div class="purr-card bento-box bento-col-6" data-component="Cinema Aesthetics">
+            <div class="bento-icon bento-icon-amber">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <h3 class="bento-heading">Exploring Cinema Styles</h3>
+            <p class="bento-body">
+              An avid cinema enthusiast who analyzes visual grammar, lighting, atmospheric color palettes, and auteur directorial styles (Christopher Nolan, Denis Villeneuve, David Fincher). Inspires my visual aesthetic and UI craft.
+            </p>
+            <div class="pill-cluster">
+              <span class="cluster-pill">#Cinematography</span>
+              <span class="cluster-pill">#ColorTheory</span>
+              <span class="cluster-pill">#VisualStorytelling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. EDUCATION SECTION ==================== -->
+    <section id="education" class="section-padding" style="background: rgba(12, 17, 28, 0.4);" data-component="Education Section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-pill">
+            <i class="fa-solid fa-graduation-cap"></i> Academic Pathway
+          </div>
+          <h2 class="section-title">Education <span class="grad-text-cyan">Timeline</span></h2>
+          <p class="section-desc">
+            The foundational institutions and undergraduate studies shaping my computer science logic.
+          </p>
+        </div>
+
+        <div class="education-cards">
+          <!-- 1. JECRC University -->
+          <div class="purr-card edu-item" data-component="JECRC University">
+            <div class="edu-icon-badge bento-icon-cyan">
+              <i class="fa-solid fa-university"></i>
+            </div>
+            <div>
+              <h3 class="edu-title">Bachelor of Technology (B.Tech) — Computer Science &amp; Engineering (Core)</h3>
+              <div class="edu-school">
+                <i class="fa-solid fa-location-dot"></i> JECRC University, Jaipur
+              </div>
+              <p class="edu-notes">
+                Batch of 2026–2030 &bull; Currently in 1st Semester. Rigorous foundation in C programming, Data Structures &amp; Algorithms, Engineering Mathematics, Discrete Logic, and applied AI workflows.
+              </p>
+            </div>
+            <div>
+              <span class="edu-time-badge">2026 – 2030 (Expected)</span>
+            </div>
+          </div>
+
+          <!-- 2. ECS School, Gwalior -->
+          <div class="purr-card edu-item" data-component="ECS School Gwalior">
+            <div class="edu-icon-badge bento-icon-purple">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div>
+              <h3 class="edu-title">Senior Secondary Education (Class XII) — CBSE Board</h3>
+              <div class="edu-school">
+                <i class="fa-solid fa-location-dot"></i> ECS School, Gwalior
+              </div>
+              <p class="edu-notes">
+                Percentage: 78% &bull; Built a solid understanding in Physics, Chemistry, Mathematics, and Computer Science foundations.
+              </p>
+            </div>
+            <div>
+              <span class="edu-time-badge">CBSE &bull; 78%</span>
+            </div>
+          </div>
+
+          <!-- 3. ST. Peters School, Dabra -->
+          <div class="purr-card edu-item" data-component="ST Peters Dabra">
+            <div class="edu-icon-badge bento-icon-amber">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div>
+              <h3 class="edu-title">Secondary School Education (Class X)</h3>
+              <div class="edu-school">
+                <i class="fa-solid fa-location-dot"></i> ST. Peters School, Dabra (M.P)
+              </div>
+              <p class="edu-notes">
+                Completed Class 10th schooling. Fostered my earliest curiosity for scientific problem solving, analytical reasoning, and computing.
+              </p>
+            </div>
+            <div>
+              <span class="edu-time-badge">Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. SKILLS SECTION ==================== -->
+    <section id="skills" class="section-padding" data-component="Skills Section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-pill">
+            <i class="fa-solid fa-microchip"></i> Capabilities
+          </div>
+          <h2 class="section-title">Technical <span class="grad-text">Arsenal</span></h2>
+          <p class="section-desc">
+            Exact competencies from my attached resume combined with my dedicated focus on Neural Networks and Mathematics.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skill-tabs">
+          <button class="tab-btn active" data-filter="all">All Disciplines</button>
+          <button class="tab-btn" data-filter="core">C &amp; Data Structures</button>
+          <button class="tab-btn" data-filter="web">HTML/CSS &amp; Web</button>
+          <button class="tab-btn" data-filter="ai">Neural Networks &amp; ML</button>
+          <button class="tab-btn" data-filter="tools">Tools, AI &amp; Vercel</button>
+        </div>
+
+        <div class="skills-deck">
+          <!-- Skill 1: C fundamentals -->
+          <div class="purr-card skill-tile" data-category="core" data-component="C Programming">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <h4 class="skill-tile-title">C (Fundamentals)</h4>
+                <span class="skill-tile-badge">Curriculum &bull; Core Stack</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Strong foundation in C language syntax, pointer arithmetic, memory management, functions, and structured modular coding.
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">Pointers</span>
+              <span class="tile-chip">Memory Allocation</span>
+              <span class="tile-chip">Structs</span>
+            </div>
+          </div>
+
+          <!-- Skill 2: Data Structures -->
+          <div class="purr-card skill-tile" data-category="core" data-component="Data Structures">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-solid fa-sitemap"></i></div>
+              <div>
+                <h4 class="skill-tile-title">Data Structures</h4>
+                <span class="skill-tile-badge">Algorithmic Problem Solving</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Basic understanding of Data Structures including Arrays, Linked Lists, Stacks, Queues, Binary Search, and Big-O efficiency analysis.
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">Arrays</span>
+              <span class="tile-chip">Stacks &amp; Queues</span>
+              <span class="tile-chip">Linked Lists</span>
+            </div>
+          </div>
+
+          <!-- Skill 3: HTML5 & CSS3 -->
+          <div class="purr-card skill-tile" data-category="web" data-component="HTML & CSS">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-brands fa-html5"></i></div>
+              <div>
+                <h4 class="skill-tile-title">HTML5 &amp; CSS3</h4>
+                <span class="skill-tile-badge">Responsive Layout Basics</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Semantic markup, Flexbox, CSS Grid, media queries for mobile-friendly layouts, glassmorphism aesthetics, and clean UI design.
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">Responsive Design</span>
+              <span class="tile-chip">CSS Grid / Flexbox</span>
+              <span class="tile-chip">UI/UX</span>
+            </div>
+          </div>
+
+          <!-- Skill 4: Git & GitHub -->
+          <div class="purr-card skill-tile" data-category="tools" data-component="Git & GitHub">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-brands fa-git-alt"></i></div>
+              <div>
+                <h4 class="skill-tile-title">Git &amp; GitHub</h4>
+                <span class="skill-tile-badge">Version Control</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Hands-on version control workflows: creating repositories, atomic commits, branching, merging, and push/pull tracking on GitHub (<code style="color:var(--neon-cyan)">github.com/Adit-commit</code>).
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">Repositories</span>
+              <span class="tile-chip">Branching</span>
+              <span class="tile-chip">Push / Pull</span>
+            </div>
+          </div>
+
+          <!-- Skill 5: AI-assisted dev tools -->
+          <div class="purr-card skill-tile" data-category="tools" data-component="AI Dev Tools">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div>
+                <h4 class="skill-tile-title">AI-Assisted Dev Tools</h4>
+                <span class="skill-tile-badge">Accelerated Learning</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Leveraging state-of-the-art AI development tools (ChatGPT, Claude, GitHub Copilot) to accelerate development workflows, debug code, and explore complex logic.
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">ChatGPT</span>
+              <span class="tile-chip">Claude</span>
+              <span class="tile-chip">GitHub Copilot</span>
+            </div>
+          </div>
+
+          <!-- Skill 6: Vercel Deployment -->
+          <div class="purr-card skill-tile" data-category="tools web" data-component="Vercel Deployment">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <div>
+                <h4 class="skill-tile-title">Vercel Deployment</h4>
+                <span class="skill-tile-badge">Static &amp; Web Hosting</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Experience deploying static web projects independently via Vercel with automated CI/CD and continuous Git repository synchronization.
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">Live Hosting</span>
+              <span class="tile-chip">CI/CD Sync</span>
+              <span class="tile-chip">Vercel Cloud</span>
+            </div>
+          </div>
+
+          <!-- Skill 7: Neural Networks & Math -->
+          <div class="purr-card skill-tile" data-category="ai" data-component="Neural Networks">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-solid fa-brain"></i></div>
+              <div>
+                <h4 class="skill-tile-title">Neural Networks &amp; Math</h4>
+                <span class="skill-tile-badge">Special Passion</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Perceptrons from scratch, multivariable calculus backpropagation gradients, linear algebra matrix operations, and Python scientific stack (NumPy, Scikit-Learn).
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">Backpropagation</span>
+              <span class="tile-chip">Linear Algebra</span>
+              <span class="tile-chip">Python / NumPy</span>
+            </div>
+          </div>
+
+          <!-- Skill 8: Tools & Soft Skills -->
+          <div class="purr-card skill-tile" data-category="tools" data-component="Problem Solving">
+            <div class="skill-tile-top">
+              <div class="skill-tile-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <div>
+                <h4 class="skill-tile-title">VS Code &amp; Soft Skills</h4>
+                <span class="skill-tile-badge">Workflow &amp; Mindset</span>
+              </div>
+            </div>
+            <p class="skill-tile-desc">
+              Proficient in VS Code extensions, MS Office (Word, Excel, PowerPoint), analytical problem solving, and quick self-learning velocity.
+            </p>
+            <div class="skill-tile-chips">
+              <span class="tile-chip">VS Code</span>
+              <span class="tile-chip">Problem-solving</span>
+              <span class="tile-chip">Self-learner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. PROJECTS SECTION ==================== -->
+    <section id="projects" class="section-padding" style="background: rgba(12, 17, 28, 0.4);" data-component="Projects Section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-pill">
+            <i class="fa-solid fa-cubes"></i> Portfolio Works
+          </div>
+          <h2 class="section-title">Featured <span class="grad-text-sunset">Projects</span></h2>
+          <p class="section-desc">
+            Directly showcasing the projects from my attached resume along with my exploratory Neural Network and Formula 1 builds.
+          </p>
+        </div>
+
+        <div class="projects-deck">
+          <!-- Project 1: Personal Portfolio Website (From Attached Resume) -->
+          <div class="purr-card proj-card" data-component="Personal Portfolio">
+            <div class="proj-top">
+              <span class="proj-badge badge-live">
+                <i class="fa-solid fa-bolt"></i> Live on Vercel
+              </span>
+              <div class="proj-actions">
+                <a href="https://portfolio-five-zeta-uhe7qqcuri.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-circle-btn" title="Live Website">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Adit-commit" target="_blank" rel="noopener noreferrer" class="proj-circle-btn" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <button class="proj-circle-btn view-project-btn" data-project="portfolio" title="View Details">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <h3 class="proj-title">Personal Portfolio Website</h3>
+            <p class="proj-desc">
+              Designed and developed an independent personal portfolio website to showcase skills, projects, and contact channels. Built with HTML/CSS and deployed live via Vercel.
+            </p>
+
+            <ul class="proj-bullets">
+              <li><i class="fa-solid fa-check"></i> Independently conceptualized, built, and deployed within the 1st semester of engineering.</li>
+              <li><i class="fa-solid fa-check"></i> Responsive layouts calibrated across mobile, tablet, and widescreen desktop monitors.</li>
+              <li><i class="fa-solid fa-check"></i> Live link: <a href="https://portfolio-five-zeta-uhe7qqcuri.vercel.app" target="_blank" style="color:var(--neon-cyan); text-decoration:underline;">portfolio-five-zeta-uhe7qqcuri.vercel.app</a></li>
+            </ul>
+
+            <div class="proj-tags">
+              <span class="proj-chip">HTML5</span>
+              <span class="proj-chip">CSS3</span>
+              <span class="proj-chip">Responsive UI</span>
+              <span class="proj-chip">Vercel</span>
+              <span class="proj-chip">Git/GitHub</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Web Application Project (From Attached Resume) -->
+          <div class="purr-card proj-card" data-component="Web Application Project">
+            <div class="proj-top">
+              <span class="proj-badge badge-ai">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> AI Accelerated
+              </span>
+              <div class="proj-actions">
+                <a href="https://github.com/Adit-commit" target="_blank" rel="noopener noreferrer" class="proj-circle-btn" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <button class="proj-circle-btn view-project-btn" data-project="webapp" title="View Details">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <h3 class="proj-title">Web Application Project</h3>
+            <p class="proj-desc">
+              Developed a web-based application applying core HTML/CSS concepts and structured programming logic. Managed iteratively via Git/GitHub.
+            </p>
+
+            <ul class="proj-bullets">
+              <li><i class="fa-solid fa-check"></i> Applied structured programming logic and clean semantic DOM hierarchy.</li>
+              <li><i class="fa-solid fa-check"></i> Used Git/GitHub for version control and atomic commit history tracking.</li>
+              <li><i class="fa-solid fa-check"></i> Leveraged AI-assisted development tools (ChatGPT, Claude, GitHub Copilot) to debug code and optimize logic.</li>
+            </ul>
+
+            <div class="proj-tags">
+              <span class="proj-chip">HTML5 / CSS3</span>
+              <span class="proj-chip">JavaScript</span>
+              <span class="proj-chip">Git Workflows</span>
+              <span class="proj-chip">AI Dev Tools</span>
+            </div>
+          </div>
+
+          <!-- Project 3: NeuroSim Visualizer (Neural Networks Passion) -->
+          <div class="purr-card proj-card" data-component="NeuroSim Project">
+            <div class="proj-top">
+              <span class="proj-badge badge-ai">
+                <i class="fa-solid fa-brain"></i> Neural Networks &amp; Math
+              </span>
+              <div class="proj-actions">
+                <a href="https://github.com/Adit-commit" target="_blank" rel="noopener noreferrer" class="proj-circle-btn" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <button class="proj-circle-btn view-project-btn" data-project="neurosim" title="View Details">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <h3 class="proj-title">NeuroSim: Neural Network &amp; Backprop Visualizer</h3>
+            <p class="proj-desc">
+              An educational computational framework built from scratch to demystify neural network mathematics without high-level black-box ML frameworks.
+            </p>
+
+            <ul class="proj-bullets">
+              <li><i class="fa-solid fa-check"></i> Manual implementation of forward propagation &amp; backpropagation gradient updates.</li>
+              <li><i class="fa-solid fa-check"></i> Visualizes matrix activations (Sigmoid, ReLU) and cost minimization across training epochs.</li>
+              <li><i class="fa-solid fa-check"></i> Demonstrates multivariable chain rule partial derivatives ($\partial L/\partial W$) step-by-step.</li>
+            </ul>
+
+            <div class="proj-tags">
+              <span class="proj-chip">Python</span>
+              <span class="proj-chip">NumPy</span>
+              <span class="proj-chip">Multivariable Calculus</span>
+              <span class="proj-chip">Linear Algebra</span>
+            </div>
+          </div>
+
+          <!-- Project 4: ApexTelemetry (F1 Telemetry Passion) -->
+          <div class="purr-card proj-card" data-component="ApexTelemetry F1">
+            <div class="proj-top">
+              <span class="proj-badge badge-f1">
+                <i class="fa-solid fa-flag-checkered"></i> Formula 1 Telemetry
+              </span>
+              <div class="proj-actions">
+                <a href="https://github.com/Adit-commit" target="_blank" rel="noopener noreferrer" class="proj-circle-btn" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <button class="proj-circle-btn view-project-btn" data-project="apextelemetry" title="View Details">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <h3 class="proj-title">ApexTelemetry: F1 Lap Time &amp; Tire Decay Predictor</h3>
+            <p class="proj-desc">
+              Inspired by Formula 1 race engineering. Forecasts tire compound decay curves and optimal pit-stop windows using regression algorithms and telemetry physics.
+            </p>
+
+            <ul class="proj-bullets">
+              <li><i class="fa-solid fa-check"></i> Regression models predicting stint duration for Soft, Medium, and Hard compounds.</li>
+              <li><i class="fa-solid fa-check"></i> Analyzes corner entry speed, track temperature, and fuel mass drop deltas.</li>
+              <li><i class="fa-solid fa-check"></i> Undercut vs. Overcut strategic advantage calculator.</li>
+            </ul>
+
+            <div class="proj-tags">
+              <span class="proj-chip">Python</span>
+              <span class="proj-chip">Scikit-Learn</span>
+              <span class="proj-chip">Pandas</span>
+              <span class="proj-chip">Race Telemetry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. RESUME HUB (ATTACHED FILE REPLACEMENT) ==================== -->
+    <section id="resume" class="section-padding" data-component="Resume Section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-pill">
+            <i class="fa-solid fa-file-invoice"></i> Verified Document
+          </div>
+          <h2 class="section-title">Official <span class="grad-text">Resume</span></h2>
+          <p class="section-desc">
+            Directly presenting my attached resume document. Preview the high-resolution visual layout or download in official PDF &amp; DOCX formats.
+          </p>
+        </div>
+
+        <div class="resume-section-grid">
+          <!-- Left: High-Res Rendered Preview of Attached Resume -->
+          <div class="purr-card resume-graphic-card" data-component="Attached Resume Preview">
+            <div>
+              <div class="resume-preview-window" id="resume-preview-trigger" title="Click to open interactive fullscreen resume">
+                <img src="assets/resume_preview.png" alt="Aditya Soni Official Resume - Attached Document" />
+                <div class="resume-preview-overlay">
+                  <span class="overlay-pill">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Fullscreen Resume
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-family:var(--font-code); font-size:0.8rem; color:var(--text-muted);">
+                <i class="fa-solid fa-check-double" style="color:var(--neon-cyan)"></i> Exact Attached File Rendered
+              </span>
+              <button id="inspect-resume-btn" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-eye"></i> Fullscreen Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Summary & Dual Download Actions -->
+          <div class="purr-card resume-details-card" data-component="Resume Download Center">
+            <div>
+              <div class="resume-meta-box">
+                <div class="resume-meta-header">
+                  <div class="resume-meta-avatar">
+                    <img src="assets/profile.jpg" alt="Aditya Soni" />
+                  </div>
+                  <div>
+                    <h3 style="font-family:var(--font-display); font-size:1.35rem; font-weight:800; color:var(--text-pure);">ADITYA SONI</h3>
+                    <p style="font-family:var(--font-code); font-size:0.85rem; color:var(--neon-cyan);">ASPIRING SOFTWARE DEVELOPMENT INTERN</p>
+                  </div>
+                </div>
+
+                <ul class="resume-key-facts">
+                  <li><i class="fa-solid fa-circle-check"></i> <strong>Education:</strong> JECRC University (B.Tech CSE Core, 1st Sem) &bull; ECS School Gwalior (CBSE 78%)</li>
+                  <li><i class="fa-solid fa-circle-check"></i> <strong>Key Disciplines:</strong> C Programming, Data Structures, HTML5/CSS3, Git/GitHub, AI-assisted tools</li>
+                  <li><i class="fa-solid fa-circle-check"></i> <strong>Achievements:</strong> Independently built &amp; deployed live portfolio website within 1st semester</li>
+                  <li><i class="fa-solid fa-circle-check"></i> <strong>Live Projects:</strong> Portfolio Website on Vercel (<a href="https://portfolio-five-zeta-uhe7qqcuri.vercel.app" target="_blank" style="color:var(--neon-cyan); text-decoration:underline;">portfolio-five-zeta-uhe7qqcuri.vercel.app</a>)</li>
+                  <li><i class="fa-solid fa-circle-check"></i> <strong>Hobbies &amp; Interests:</strong> Diverse cinema genres, business case studies, solo travelling, F1 enthusiast</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Two Buttons for Downloading Resume & Formats -->
+            <div class="resume-action-buttons">
+              <div class="resume-btn-pair">
+                <button id="download-pdf-btn" class="btn btn-purrweb">
+                  <i class="fa-solid fa-file-pdf"></i> Download Attached PDF
+                </button>
+                <button id="download-docx-btn" class="btn btn-secondary">
+                  <i class="fa-solid fa-file-word"></i> Download Attached DOCX
+                </button>
+              </div>
+              <button id="preview-resume-btn" class="btn btn-outline-cyan" style="width:100%;">
+                <i class="fa-solid fa-print"></i> Interactive ATS Print / PDF Dialog
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. AI GENERATED CERTIFICATE SECTION ==================== -->
+    <section id="certificate" class="section-padding" style="background: rgba(12, 17, 28, 0.4);" data-component="Certificate Section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-pill">
+            <i class="fa-solid fa-award"></i> Verified Credential
+          </div>
+          <h2 class="section-title">AI Generated <span class="grad-text-cyan">Certificate</span></h2>
+          <p class="section-desc">
+            Autonomous credential attestations verifying foundational competence in Neural Networks, Machine Learning pipelines, and computational thinking.
+          </p>
+        </div>
+
+        <div class="cert-section-grid">
+          <!-- Certificate Card Frame -->
+          <div class="purr-card cert-card-box" data-component="AI Certificate Card">
+            <div>
+              <div class="cert-diploma-frame">
+                <div class="cert-tag-top">Global AI &amp; Computational Intelligence Council</div>
+                <div class="cert-main-head">Certificate of Excellence</div>
+
+                <div style="text-align:center; font-size:0.85rem; color:var(--text-muted); font-style:italic;">
+                  This autonomous distinction is presented to
+                </div>
+                <div class="cert-candidate">Aditya Soni</div>
+                <p class="cert-text-body">
+                  In recognition of demonstrated proficiency in Foundational Neural Networks, Python Scientific Computing, Algorithmic Logic, and the Mathematics of Machine Learning.
+                </p>
+
+                <div class="cert-footer-details">
+                  <div style="display:flex; flex-direction:column; font-size:0.78rem; color:var(--text-secondary);">
+                    <strong style="color:var(--text-pure);">Autonomous AI Council</strong>
+                    <span>Cryptographic Ledger Attestation</span>
+                  </div>
+                  <div class="gold-seal-badge">
+                    <span>★ VERIFIED ★</span>
+                    <span>2026</span>
+                  </div>
+                  <div style="display:flex; flex-direction:column; font-size:0.78rem; color:var(--text-secondary); text-align:right;">
+                    <strong style="color:var(--text-pure);">B.Tech Technical Council</strong>
+                    <span>Applied Computing Guild</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <button id="download-cert-btn" class="btn btn-purrweb">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Certificate (PNG)
+              </button>
+              <button id="preview-cert-btn" class="btn btn-secondary">
+                <i class="fa-solid fa-expand"></i> Fullscreen Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Verification Proof -->
+          <div class="purr-card" style="padding:34px; display:flex; flex-direction:column; justify-content:space-between;" data-component="Verification Proof">
+            <div>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+                <div class="bento-icon bento-icon-amber" style="margin-bottom:0;">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <h3 style="font-family:var(--font-display); font-size:1.25rem; font-weight:800; color:var(--text-pure);">Cryptographic Proof</h3>
+                  <span style="font-family:var(--font-code); font-size:0.75rem; color:var(--neon-amber);">HASH: SHA256-AS-2026-X984</span>
+                </div>
+              </div>
+
+              <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin-bottom:18px;">
+                Generated dynamically via HTML5 Canvas vector rendering at <strong>1920×1080 resolution</strong> with high-resolution cyber-gold gradients and cryptographic stamps.
+              </p>
+
+              <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-glass); border-radius:12px; padding:16px;">
+                <p style="font-family:var(--font-code); font-size:0.8rem; color:#cbd5e1;">
+                  • Recipient: <strong>ADITYA SONI</strong><br/>
+                  • Domain: <strong>Neural Networks &amp; ML Foundations</strong><br/>
+                  • Attestation ID: <code>AS-AIML-2026-X984</code><br/>
+                  • Status: <strong>Attested &bull; 100% Authentic</strong>
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-top:20px;">
+              <span style="font-family:var(--font-code); font-size:0.8rem; color:var(--text-muted);">
+                <i class="fa-solid fa-clock"></i> Generated for 2026 Academic Season
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. CONTACT SECTION ==================== -->
+    <section id="contact" class="section-padding" data-component="Contact Section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-pill">
+            <i class="fa-solid fa-satellite-dish"></i> Let's Talk
+          </div>
+          <h2 class="section-title">Get In <span class="grad-text">Touch</span></h2>
+          <p class="section-desc">
+            Open to software development internship opportunities, collaborative AI/ML builds, and tech conversations.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left: Direct Channels -->
+          <div class="contact-channels">
+            <!-- Phone -->
+            <div class="purr-card channel-card" data-component="Phone Contact">
+              <div class="channel-left">
+                <div class="channel-icon bento-icon-cyan">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Phone &bull; WhatsApp</span>
+                  <a href="tel:+919630307240" class="channel-value">+91 9630307240</a>
+                </div>
+              </div>
+              <button class="copy-pill-btn" data-copy="+91 9630307240" title="Copy Phone">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Email -->
+            <div class="purr-card channel-card" data-component="Email Contact">
+              <div class="channel-left">
+                <div class="channel-icon bento-icon-pink">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Email Address</span>
+                  <a href="mailto:aditya.soni.linkedin@gmail.com" class="channel-value">aditya.soni.linkedin@gmail.com</a>
+                </div>
+              </div>
+              <button class="copy-pill-btn" data-copy="aditya.soni.linkedin@gmail.com" title="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- GitHub -->
+            <div class="purr-card channel-card" data-component="GitHub Contact">
+              <div class="channel-left">
+                <div class="channel-icon bento-icon-purple">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">GitHub Repository</span>
+                  <a href="https://github.com/Adit-commit" target="_blank" rel="noopener noreferrer" class="channel-value">
+                    github.com/Adit-commit <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="purr-card channel-card" data-component="LinkedIn Contact">
+              <div class="channel-left">
+                <div class="channel-icon bento-icon-cyan">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">LinkedIn Profile</span>
+                  <a href="https://www.linkedin.com/in/aditya-soni-918044429/" target="_blank" rel="noopener noreferrer" class="channel-value">
+                    linkedin.com/in/aditya-soni-918044429 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="purr-card channel-card" data-component="Instagram Contact">
+              <div class="channel-left">
+                <div class="channel-icon bento-icon-pink">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Instagram Handle</span>
+                  <a href="https://www.instagram.com/aditya_soni_082/" target="_blank" rel="noopener noreferrer" class="channel-value">
+                    @aditya_soni_082 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="purr-card channel-card" data-component="Location Contact">
+              <div class="channel-left">
+                <div class="channel-icon bento-icon-amber">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Location / Origin</span>
+                  <span class="channel-value">Jaipur, Rajasthan &bull; Gwalior, M.P</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Transmission Form -->
+          <div class="purr-card form-box" data-component="Contact Form">
+            <h3 class="form-head">Send a Transmission</h3>
+            <p class="form-sub">Have an opportunity, internship offer, or project inquiry? Drop a note below.</p>
+
+            <form id="transmission-form" class="styled-form">
+              <div class="form-field">
+                <label for="sender-name"><i class="fa-regular fa-user"></i> Your Name</label>
+                <input type="text" id="sender-name" class="input-control" placeholder="e.g. Alex Morgan" required />
+              </div>
+
+              <div class="form-field">
+                <label for="sender-email"><i class="fa-regular fa-envelope"></i> Your Email</label>
+                <input type="email" id="sender-email" class="input-control" placeholder="alex@domain.com" required />
+              </div>
+
+              <div class="form-field">
+                <label for="sender-subject"><i class="fa-solid fa-tag"></i> Subject Topic</label>
+                <input type="text" id="sender-subject" class="input-control" placeholder="Software Internship, F1 Chat, or Project" required />
+              </div>
+
+              <div class="form-field">
+                <label for="sender-message"><i class="fa-regular fa-comment-dots"></i> Message Content</label>
+                <textarea id="sender-message" class="input-control" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-purrweb" style="width:100%;">
+                <i class="fa-solid fa-paper-plane"></i> Transmit Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-wrap">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand-title">&lt;Aditya<span class="brand-dot">.</span>Soni /&gt;</div>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">
+            Aspiring Software Development Intern &bull; B.Tech CSE @ JECRC University
+          </p>
+        </div>
+
+        <div class="footer-social-row">
+          <a href="https://github.com/Adit-commit" target="_blank" rel="noopener noreferrer" class="footer-icon" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aditya-soni-918044429/" target="_blank" rel="noopener noreferrer" class="footer-icon" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/aditya_soni_082/" target="_blank" rel="noopener noreferrer" class="footer-icon" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:aditya.soni.linkedin@gmail.com" class="footer-icon" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+        <div>
+          <button id="back-to-top" class="footer-icon" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- ==================== MODAL: FULLSCREEN CERTIFICATE ==================== -->
+  <div class="modal-overlay" id="cert-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-award" style="color:var(--neon-amber)"></i> AI Credential Attestation
+        </div>
+        <button class="modal-close-btn" id="cert-modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="cert-canvas-preview" style="text-align:center;">
+        <!-- Canvas is injected here dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" id="modal-close-cert-btn">Close</button>
+        <button class="btn btn-purrweb btn-sm" id="modal-download-cert-btn">
+          <i class="fa-solid fa-download"></i> Download High-Res PNG
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: EXACT ATTACHED RESUME FULLSCREEN ==================== -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="modal-dialog" style="max-width:920px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-file-pdf" style="color:var(--neon-cyan)"></i> Official Resume — Aditya Soni
+        </div>
+        <button class="modal-close-btn" id="resume-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Replicating the Exact Layout of the User's Attached Resume -->
+        <div class="exact-resume-container">
+          <!-- Header with Photo -->
+          <div class="exact-resume-header">
+            <div class="exact-header-avatar">
+              <img src="assets/profile.jpg" alt="Aditya Soni" />
+            </div>
+            <div>
+              <h1 class="exact-candidate-name">ADITYA SONI</h1>
+              <p class="exact-candidate-sub">ASPIRING SOFTWARE DEVELOPMENT INTERN</p>
+            </div>
+          </div>
+
+          <!-- Two-Column Layout -->
+          <div class="exact-two-column">
+            <!-- Left Main Column -->
+            <div class="exact-left-col">
+              <!-- Professional Summary -->
+              <div>
+                <div class="exact-sec-title">PROFESSIONAL SUMMARY</div>
+                <p style="font-size:0.82rem; color:#334155; line-height:1.5;">
+                  Motivated first-year B.Tech Computer Science Engineering student with a strong foundation in C programming, HTML/CSS, and version control using Git/GitHub. Hands-on experience leveraging AI tools to accelerate learning and development workflows. Built and deployed a personal portfolio website and a web application project independently, demonstrating initiative, quick learning ability, and a genuine interest in software development. Eager to contribute to a team as a Software Development Intern while growing technical skills in a real-world environment.
+                </p>
+              </div>
+
+              <!-- Education -->
+              <div>
+                <div class="exact-sec-title">EDUCATION</div>
+                <div style="margin-bottom:8px;">
+                  <div class="exact-entry-title">Bachelor of Technology (B.Tech) — Computer Science &amp; Engineering (Core)</div>
+                  <div class="exact-entry-sub">JECRC University | Batch of 2026–2030 | Currently in 1st Semester</div>
+                </div>
+                <div>
+                  <div class="exact-entry-title">Senior Secondary Education (Class XII) — CBSE Board</div>
+                  <div class="exact-entry-sub">Percentage: 78% &bull; ECS School, Gwalior</div>
+                </div>
+              </div>
+
+              <!-- Projects -->
+              <div>
+                <div class="exact-sec-title">PROJECTS</div>
+                <div style="margin-bottom:10px;">
+                  <div class="exact-entry-title">Personal Portfolio Website</div>
+                  <ul class="exact-bullets">
+                    <li>Designed and developed a personal portfolio website to showcase skills, projects, and contact information</li>
+                    <li>Built using HTML/CSS and deployed live via Vercel</li>
+                    <li>Live link: <code style="color:#0284c7">portfolio-five-zeta-uhe7qqcuri.vercel.app</code></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="exact-entry-title">Web Application Project</div>
+                  <ul class="exact-bullets">
+                    <li>Developed a web-based application applying core HTML/CSS concepts and structured programming logic</li>
+                    <li>Used Git/GitHub for version control and iterative development</li>
+                    <li>Leveraged AI-assisted tools to debug code, optimize logic, and speed up development</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Certifications -->
+              <div>
+                <div class="exact-sec-title">CERTIFICATIONS</div>
+                <p style="font-size:0.82rem; color:#334155;">
+                  In progress — actively pursuing beginner-level certifications in web development and version control to strengthen practical skills.
+                </p>
+              </div>
+
+              <!-- Achievements -->
+              <div>
+                <div class="exact-sec-title">ACHIEVEMENTS</div>
+                <ul class="exact-bullets">
+                  <li>Independently conceptualized, built, and deployed a live personal portfolio website within the first semester of engineering</li>
+                  <li>Proactively adopted Git/GitHub and AI-assisted development tools to build practical skills beyond the core curriculum</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Sidebar Column -->
+            <div class="exact-right-col">
+              <!-- Details -->
+              <div>
+                <div class="exact-sec-title">DETAILS</div>
+                <p style="font-size:0.82rem; color:#cbd5e1; line-height:1.6;">
+                  Jaipur, Rajasthan<br/>
+                  India<br/>
+                  +91 9630307240<br/>
+                  aditya.soni.linkedin@gmail.com
+                </p>
+              </div>
+
+              <!-- Links -->
+              <div>
+                <div class="exact-sec-title">LINKS</div>
+                <p style="font-size:0.82rem; color:#38bdf8; line-height:1.7;">
+                  <a href="https://github.com/Adit-commit" target="_blank" style="color:#38bdf8; text-decoration:underline;">GitHub</a><br/>
+                  <a href="https://www.linkedin.com/in/aditya-soni-918044429/" target="_blank" style="color:#38bdf8; text-decoration:underline;">LinkedIn</a><br/>
+                  <a href="https://portfolio-five-zeta-uhe7qqcuri.vercel.app" target="_blank" style="color:#38bdf8; text-decoration:underline;">Portfolio Website</a>
+                </p>
+              </div>
+
+              <!-- Technical Skills -->
+              <div>
+                <div class="exact-sec-title">TECHNICAL SKILLS</div>
+                <ul class="exact-bullets">
+                  <li>C (fundamentals)</li>
+                  <li>Basic understanding of Data Structures</li>
+                  <li>HTML5</li>
+                  <li>CSS3 (responsive layout basics)</li>
+                  <li>Git &amp; GitHub (repositories, commits, branching, push/pull)</li>
+                  <li>VS Code</li>
+                  <li>AI-assisted dev tools (ChatGPT, Claude, GitHub Copilot)</li>
+                  <li>Deploying static/web projects on Vercel</li>
+                  <li>MS Office (Word, Excel, PowerPoint)</li>
+                  <li>Problem-solving</li>
+                  <li>Quick self-learner</li>
+                </ul>
+              </div>
+
+              <!-- Hobbies & Interests -->
+              <div>
+                <div class="exact-sec-title">HOBBIES &amp; INTERESTS</div>
+                <ul class="exact-bullets">
+                  <li>Exploring diverse cinema genres and analyzing storytelling styles</li>
+                  <li>Studying real-life business case studies</li>
+                  <li>Solo travelling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" id="modal-close-resume-btn">Close</button>
+        <button class="btn btn-purrweb btn-sm" id="modal-print-resume-btn">
+          <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: PROJECT DETAILS ==================== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title" id="project-modal-title">
+          <!-- Injected dynamically -->
+        </div>
+        <button class="modal-close-btn" id="project-modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="project-modal-body">
+        <!-- Injected dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" id="modal-close-proj-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/certificate.js"></script>
+  <script src="js/resume.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
